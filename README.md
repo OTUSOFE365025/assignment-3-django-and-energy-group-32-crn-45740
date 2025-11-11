@@ -36,7 +36,7 @@ django-orm/
 
 Step 1
 ----------
-Initlize the virtuql machine
+Initlize the virtual machine
 <img width="1043" height="81" alt="image" src="https://github.com/user-attachments/assets/9b99c097-5fe9-44bd-a304-fb829da39f43" />
 
 Step 2
