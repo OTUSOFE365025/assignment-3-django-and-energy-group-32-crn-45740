@@ -21,7 +21,7 @@ The scanner.py is the user interface for the cash register system, the items are
 
 :open_file_folder: Project Overview and File folder
 ---------------------------------
-
+'''
 django-orm/
 ├── db/
 │   ├── __init__.py
