@@ -1,18 +1,8 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/-cPJVYMd)
-Django ORM Standalone
-=====================
+**Group 32 **
+----------------------------
+Mohid Sohail, Muhammad Burhan, Hanzlah Imran
+----------------------------
 
-![Django](https://img.shields.io/badge/Django_ORM-Standalone-blue)
-![Python](https://img.shields.io/badge/Python-yellow)
-
-Use the database components of Django without having to use the rest of Django (i.e. running a web server)! :tada: A typical use case for using this template would be if you are writing a python script and you would like the database functionality provided by Django, but have no need for the request/response functionalty of a client/server web application that Django also provides. 
-
-With this project template you can write regular python scripts and use Django's excellent ORM functionality with the database backend of your choice. This makes it convienient for Djangonauts to write database driven python applications with the familiar and well polished Django ORM. Enjoy.
-
-:gear: Requirements
--------------------
-- Last tested successfully with Python 3.10.4 and Django 5.0.6
-- Create venv and pip install django to import the required modules.
 
 :open_file_folder: File Structure
 ---------------------------------
