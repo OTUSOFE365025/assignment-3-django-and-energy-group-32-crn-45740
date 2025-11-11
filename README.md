@@ -42,7 +42,7 @@ step 4
 --------
 Scanning the upc codes until the UI is closed
 
-<img width="474" height="567" alt="image" src="https://github.com/user-attachments/assets/a383981e-4eb6-4855-970b-4d511c80ab41" />
+<img width="1456" height="698" alt="image" src="https://github.com/user-attachments/assets/41d5fa09-a34e-457f-b4ea-d7a1da2161fa" />
 
 
 
