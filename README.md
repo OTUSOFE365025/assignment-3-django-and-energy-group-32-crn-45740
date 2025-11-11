@@ -4,9 +4,9 @@
 **Instructor:** Dr. Hani Sami  
 **Date:** 10 November 2025  
 **Group Members:**  
-- Mohid Sohail  100912993 - deliverable 
-- Hanzalah Imran  100912657 - deliverable 
-- Burhanuddin Mohammed 100943760 - deliverable 
+- Mohid Sohail  100912993  
+- Hanzalah Imran  100912657   
+- Burhanuddin Mohammed 100943760  
 
 There was no single person working on one thing. We all worked as a group on each deliverable. 
 
