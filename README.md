@@ -1,6 +1,6 @@
 Group 32 
 ----------------------------
-Mohid Sohail, Muhammad Burhan, Hanzlah Imran
+Mohid Sohail, Mohammad Burhan, Hanzlah Imran
 
 
 :open_file_folder: Project Overview and File folder
