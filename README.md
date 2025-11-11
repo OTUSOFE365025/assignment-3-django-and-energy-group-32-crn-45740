@@ -36,6 +36,7 @@ Populate the data base and shows us the items
 step 4
 --------
 Scanning the upc codes until the UI is closed
+
 <img width="474" height="567" alt="image" src="https://github.com/user-attachments/assets/a383981e-4eb6-4855-970b-4d511c80ab41" />
 
 
