@@ -1,21 +1,9 @@
-# gui_scanner.py
 import os, sys, django
 from decimal import Decimal
 import tkinter as tk
 from tkinter import messagebox, ttk
 
-# ---------------- Theme / layout tweaks you can easily change ----------------
-WINDOW_SIZE   = "380x420"   # make the window smaller or bigger here
-ACCENT        = "#2d6cdf"   # primary accent (Scan button)
-DANGER        = "#e25555"   # Clear Cart
-NEUTRAL       = "#666666"   # Exit
-BG            = "#f7f7fb"   # window background
-FG            = "#111111"
-FONT_BASE     = ("Arial", 11)
-FONT_TITLE    = ("Arial", 14, "bold")
-# -----------------------------------------------------------------------------
 
-# setup Django ORM environment
 sys.dont_write_bytecode = True
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
 django.setup()
@@ -33,10 +21,8 @@ class CashRegisterGUI:
 
         self.total = Decimal("0.00")
 
-        # ---------------- Title ----------------
         tk.Label(root, text="Cash Register Scanner", font=FONT_TITLE, bg=BG, fg=FG).pack(pady=(10, 6))
 
-        # ---------------- Display (Treeview) ----------------
         display_frame = tk.Frame(root, bg=BG)
         display_frame.pack(padx=10, pady=(0, 8), fill="both", expand=True)
 
@@ -47,7 +33,6 @@ class CashRegisterGUI:
         self.tree.column("Product", width=230, anchor="w")
         self.tree.column("Price", width=80, anchor="e")
 
-        # Scrollbar
         vsb = ttk.Scrollbar(display_frame, orient="vertical", command=self.tree.yview)
         self.tree.configure(yscrollcommand=vsb.set)
         self.tree.grid(row=0, column=0, sticky="nsew")
@@ -56,7 +41,6 @@ class CashRegisterGUI:
         display_frame.rowconfigure(0, weight=1)
         display_frame.columnconfigure(0, weight=1)
 
-        # ---------------- Input (UNDER the display) ----------------
         input_frame = tk.Frame(root, bg=BG)
         input_frame.pack(padx=10, pady=(4, 6), fill="x")
 
@@ -66,7 +50,6 @@ class CashRegisterGUI:
         self.upc_entry.bind("<Return>", self.scan_product)
         self.upc_entry.focus()
 
-        # Colored Scan button next to the entry
         self.scan_btn = tk.Button(
             input_frame, text="Scan", font=FONT_BASE,
             command=self.scan_product, bg=ACCENT, fg="white",
@@ -74,14 +57,12 @@ class CashRegisterGUI:
         )
         self.scan_btn.grid(row=0, column=2)
 
-        # ---------------- Total ----------------
         total_frame = tk.Frame(root, bg=BG)
         total_frame.pack(padx=10, pady=(6, 8), fill="x")
 
         self.total_label = tk.Label(total_frame, text="Total: $0.00", font=("Arial", 13, "bold"), bg=BG, fg=FG)
         self.total_label.pack(anchor="e")
 
-        # ---------------- Bottom Buttons ----------------
         btn_frame = tk.Frame(root, bg=BG)
         btn_frame.pack(padx=10, pady=(2, 10), fill="x")
 
@@ -99,10 +80,8 @@ class CashRegisterGUI:
         )
         self.exit_btn.pack(side="right")
 
-        # Light styling for ttk so it blends a bit better
         self._style_tree()
 
-    # ---------- Style helpers ----------
     def _style_tree(self):
         style = ttk.Style()
         # Use default theme but tweak row height and fonts a bit
@@ -112,7 +91,6 @@ class CashRegisterGUI:
         except Exception:
             pass
 
-    # ---------- Actions ----------
     def scan_product(self, event=None):
         upc = self.upc_entry.get().strip()
         if not upc:
