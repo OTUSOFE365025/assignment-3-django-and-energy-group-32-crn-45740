@@ -17,7 +17,7 @@ There was no single person working on one thing. We all worked as a group on eac
 This project uses Django ORM to create a stand-alone cash register application. It includes a Graphical User Interface (GUI) that allows the user to simulate adding products to their cart based on their UPC code and computes the total bill of all items. Products to be sold can be entered into the database with their name, price, and UPC code.
 
 The scanner.py is the user interface for the cash register system, the items are created and populate the database in main.py, and the model for the product object is created in db/models.py.
----
+
 
 :open_file_folder: Project Overview and File folder
 ---------------------------------
