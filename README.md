@@ -1,7 +1,6 @@
 Group 32 
 ----------------------------
 Mohid Sohail, Muhammad Burhan, Hanzlah Imran
-----------------------------
 
 
 :open_file_folder: File Structure
@@ -19,76 +18,25 @@ django-orm/
 └── db.sqlite3
 ```
 
-__The main.py file is the entry point for the project, and where you start your code. You automatically get access to your models via ```from db.models import *```
-Think of it like a plain old python file, but now with the addition of Django's feature-rich models.__ :smiling_face_with_three_hearts:
+Step 1
+----------
+Initlize the virtuql machine
+<img width="1043" height="81" alt="image" src="https://github.com/user-attachments/assets/9b99c097-5fe9-44bd-a304-fb829da39f43" />
 
-__The db/models.py is where you configure your typical Django models.__ There is a toy user model included as a simple example. After running the migrations command in the quick setup below, a db.sqlite3 file will be generated. The settings.py file is where can swap out the sqlite3 database for another database connection, such as Postgres or AmazonRDS, if you wish. For most applications, sqlite3 will be powerful enough. But if you need to swap databases down the road, you can easily do so, which is one of the benefits of using the Django ORM. 
-
-:rocket: Quick Setup
---------------------
-Create a folder for your project on your local machine
-```
-mkdir myproject; cd myproject
-```
-Create a virtual environment and install django
-```
-python -m venv venv; source venv/bin/activate; pip install django
-```
-Download this project template from GitHub
-```
-git clone git@github.com:dancaron/Django-ORM.git; cd Django-ORM
-```
-Initialize the database
-```
-python manage.py makemigrations db; python manage.py migrate
-```
-Run the project
-```
-python main.py
-```
-
-Feel free to send pull requests if you want to improve this project.
-
-:crystal_ball: Example
-----------------------
-After running Quick Start above: 
-
-Code in db/models.py:
-```
-# Sample User model
-class User(models.Model):
-    name = models.CharField(max_length=50, default='Dan')
-
-    def __str__(self):
-        return self.name
-```
-Code in main.py:
-```
-# Seed a few users in the database
-User.objects.create(name='Dan')
-User.objects.create(name='Robert')
-
-for u in User.objects.all():
-    print(f'ID: {u.id} \tUsername: {u.name}')
-```
-Output from command: ```python main.py```
-```
-ID: 1	Username: Dan
-ID: 2	Username: Robert
-```
-
-:mortar_board: Django Models
-----------------------------
-
-Link: [How to Use Django Models](https://docs.djangoproject.com/en/3.1/topics/db/models/)
-
-License
+Step 2
 -------
+In order to build the database structure, we ran the migrations
+<img width="1484" height="253" alt="image" src="https://github.com/user-attachments/assets/6c75b67f-e8a2-4f61-972a-bf04813d9d25" />
 
-The MIT License (MIT) Copyright (c) 2024 Dan Caron
+step 3 
+---------
+Populate the data base and shows us the items
+<img width="1413" height="272" alt="image" src="https://github.com/user-attachments/assets/f3f50737-b49b-4558-a5c0-5f164eac1ea2" />
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+step 4
+--------
+Scanning the upc codes until the UI is closed
+<img width="474" height="567" alt="image" src="https://github.com/user-attachments/assets/a383981e-4eb6-4855-970b-4d511c80ab41" />
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
