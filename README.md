@@ -25,6 +25,8 @@ django-orm/
 ├── manage.py
 ├── README.md
 └── settings.py
+└── scanner.py
+└── db.sqlite3
 ```
 
 __The main.py file is the entry point for the project, and where you start your code. You automatically get access to your models via ```from db.models import *```
